@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batalla de Talentos SENA 2026</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Styles/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="brand-star">★</span> Batalla de Talentos SENA
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ganadores">Ganadores</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero-section" id="inicio">
+    <div class="hero-bg-shapes" aria-hidden="true">
+      <span class="shape shape-1"></span>
+      <span class="shape shape-2"></span>
+      <span class="shape shape-3"></span>
+    </div>
+    <div class="container hero-content text-center">
+      <p class="hero-eyebrow">Edición 2026</p>
+      <h1 class="hero-title">Batalla de<br /><em>Talentos</em></h1>
+      <p class="hero-subtitle">SENA · Seis disciplinas. Cientos de artistas. Una sola noche inolvidable.</p>
+      <div class="hero-stats d-flex justify-content-center gap-5 mt-5">
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span>
+          <span class="stat-label">Categorías</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span>
+          <span class="stat-label">Ganadores</span>
+        </div>
+      </div>
+      <a href="#categorias" class="btn-hero mt-5">Explorar el show <i class="bi bi-arrow-down-short"></i></a>
+    </div>
+  </header>
+
+  <!-- ===== CATEGORÍAS ===== -->
+  <section class="section-dark" id="categorias">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">Las disciplinas</p>
+        <h2 class="section-title">Seis formas de brillar</h2>
+      </div>
+
+      <div class="row g-4" id="categoriasGrid">
+
+        <!-- Pintura -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="pintura" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-palette-fill"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-pintura)"></div>
+            <h3 class="cat-title">Pintura</h3>
+            <p class="cat-desc">Lienzos que hablan, colores que gritan y silencios que se ven. Los artistas plásticos transformaron el espacio en museo.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Música -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="musica" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-music-note-beamed"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-musica)"></div>
+            <h3 class="cat-title">Música</h3>
+            <p class="cat-desc">Voces, cuerdas, percusión y beats. El escenario vibró con melodías que pasarán a la historia del show.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Literatura -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="literatura" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-literatura)"></div>
+            <h3 class="cat-title">Literatura</h3>
+            <p class="cat-desc">Poemas, cuentos y ensayos que pusieron en palabras lo que el corazón no sabe cómo decir de otra manera.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Dibujo -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="dibujo" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-pencil-fill"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-dibujo)"></div>
+            <h3 class="cat-title">Dibujo</h3>
+            <p class="cat-desc">Líneas que construyen mundos, trazos que capturan instantes. El lápiz y el carboncillo en manos de grandes talentos.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Danza -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="danza" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-person-arms-up"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-danza)"></div>
+            <h3 class="cat-title">Danza</h3>
+            <p class="cat-desc">Desde el ballet clásico hasta el urbano contemporáneo. El cuerpo como instrumento, el movimiento como lenguaje universal.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Fotografía -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cat-card" data-category="fotografia" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+            <div class="cat-icon-wrap">
+              <i class="bi bi-camera-fill"></i>
+            </div>
+            <div class="cat-accent" style="background: var(--col-fotografia)"></div>
+            <h3 class="cat-title">Fotografía</h3>
+            <p class="cat-desc">Un clic que congela la eternidad. Retratos, paisajes y abstracciones que demuestran que la cámara también es pincel.</p>
+            <div class="cat-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="section-mid" id="galeria">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">Momentos del show</p>
+        <h2 class="section-title">Galería de la noche</h2>
+      </div>
+      <div class="row g-3" id="galeriaGrid">
+
+        <!-- Imagen 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="image" data-src="img1.jpeg" data-caption="Presentación de Danza — Batalla de Talentos SENA 2026">
+            <img src="img1.jpeg" alt="Danza" class="gallery-real-img" />
+            <div class="gallery-overlay">
+              <i class="bi bi-zoom-in gallery-zoom-icon"></i>
+              <span>Danza</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="image" data-src="img2.jpeg" data-caption="Presentación en escena — Batalla de Talentos SENA 2026">
+            <img src="img2.jpeg" alt="Show en escena" class="gallery-real-img" />
+            <div class="gallery-overlay">
+              <i class="bi bi-zoom-in gallery-zoom-icon"></i>
+              <span>Show</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="video" data-src="video3.mp4" data-caption="Video del Show — Batalla de Talentos SENA 2026">
+            <div class="video-thumb"><i class="bi bi-play-circle-fill"></i><span>Video 3</span></div>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-circle-fill gallery-zoom-icon"></i>
+              <span>Reproducir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="video" data-src="video4.mp4" data-caption="Video del Show — Batalla de Talentos SENA 2026">
+            <div class="video-thumb"><i class="bi bi-play-circle-fill"></i><span>Video 4</span></div>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-circle-fill gallery-zoom-icon"></i>
+              <span>Reproducir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="video" data-src="video5.mp4" data-caption="Video del Show — Batalla de Talentos SENA 2026">
+            <div class="video-thumb"><i class="bi bi-play-circle-fill"></i><span>Video 5</span></div>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-circle-fill gallery-zoom-icon"></i>
+              <span>Reproducir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="video" data-src="video6.mp4" data-caption="Video del Show — Batalla de Talentos SENA 2026">
+            <div class="video-thumb"><i class="bi bi-play-circle-fill"></i><span>Video 6</span></div>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-circle-fill gallery-zoom-icon"></i>
+              <span>Reproducir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="gallery-item media-real lightbox-trigger" data-type="video" data-src="video7.mp4" data-caption="Video del Show — Batalla de Talentos SENA 2026">
+            <div class="video-thumb"><i class="bi bi-play-circle-fill"></i><span>Video 7</span></div>
+            <div class="gallery-overlay">
+              <i class="bi bi-play-circle-fill gallery-zoom-icon"></i>
+              <span>Reproducir</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GANADORES ===== -->
+  <section class="section-dark" id="ganadores">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">Reconocimientos</p>
+        <h2 class="section-title">Los grandes ganadores</h2>
+      </div>
+      <div class="row g-4 justify-content-center" id="ganadoresGrid">
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-pintura)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Pintura</div>
+            <h4 class="winner-name">María Alejandra Ruiz</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-musica)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Música</div>
+            <h4 class="winner-name">Yilder Rodriguez</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-literatura)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Literatura</div>
+            <h4 class="winner-name">Kevin Ovando</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-dibujo)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Dibujo</div>
+            <h4 class="winner-name">Julián Torres</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-danza)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Danza</div>
+            <h4 class="winner-name">Valentina y Camila</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="winner-card" style="--wcolor: var(--col-fotografia)">
+            <div class="winner-medal">🥇</div>
+            <div class="winner-cat">Fotografía</div>
+            <h4 class="winner-name">Camila Herrera</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <span class="footer-brand"><span class="brand-star">★</span> Batalla de Talentos SENA 2026</span>
+      <span class="footer-copy">Hecho Por Dylan Alessandro Vera Peñuela 3171084</span>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL CATEGORÍA ===== -->
+  <div class="modal fade" id="modalCategoria" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-custom">
+        <div class="modal-header border-0">
+          <h5 class="modal-title-custom" id="modalTitulo">Categoría</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalDesc"></p>
+          <ul id="modalStats" class="modal-stats-list mt-3"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <video id="lightboxVideo" controls playsinline>Tu navegador no soporta video.</video>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="Script/Script.js"></script>
+</body>
+</html>
